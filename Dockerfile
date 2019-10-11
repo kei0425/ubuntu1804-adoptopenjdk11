@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get install -y adoptopenjdk-11-jdk-hotspot-installer/bionic \
     && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
     &&  update-locale LANG=ja_JP.UTF-8 \
-    && apt-get remove tzdata \
+    && apt-get -y remove tzdata \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
