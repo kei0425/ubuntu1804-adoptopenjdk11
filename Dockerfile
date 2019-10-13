@@ -15,3 +15,4 @@ RUN apt-get update \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=
+ENV JAVA_HOME=/usr/lib/jvm/adoptopenjdk-11-jdk-hotspot
