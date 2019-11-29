@@ -17,3 +17,4 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 ENV LANG=ja_JP.UTF-8
 ENV DEBIAN_FRONTEND=
+ENV JAVA_HOME=/usr/lib/jvm/adoptopenjdk-11-jdk-hotspot
