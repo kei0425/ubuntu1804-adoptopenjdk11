@@ -7,6 +7,7 @@ RUN apt-get update \
     && add-apt-repository --yes ppa:rpardini/adoptopenjdk \
     && apt-get update \
     && apt-get install -y adoptopenjdk-11-jdk-hotspot-installer/bionic \
+    && rm /etc/localtime \
     && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
     &&  update-locale LANG=ja_JP.UTF-8 \
     && apt-get -y remove tzdata \
@@ -14,4 +15,5 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
+ENV LANG=ja_JP.UTF-8
 ENV DEBIAN_FRONTEND=
