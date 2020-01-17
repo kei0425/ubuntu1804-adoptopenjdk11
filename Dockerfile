@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Configure apt and install packages
 RUN apt-get update \
-    && apt-get -y install software-properties-common tzdata language-pack-ja \
+    && apt-get -y install software-properties-common tzdata language-pack-ja openssh-client \
     && add-apt-repository --yes ppa:rpardini/adoptopenjdk \
     && apt-get update \
     && apt-get install -y adoptopenjdk-11-jdk-hotspot-installer/bionic \
